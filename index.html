@@ -1,44 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js">
 <head>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
-          id="viewport">
-    <meta charset="UTF-8">
-    <title>下载课程表</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>App plus</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Fonts -->
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- Js -->
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
     <script>
-        function isWeiXin() {
-            var ua = window.navigator.userAgent.toLowerCase();
-            console.log(ua);//mozilla/5.0 (iphone; cpu iphone os 9_1 like mac os x) applewebkit/601.1.46 (khtml, like gecko)version/9.0 mobile/13b143 safari/601.1
-            if (ua.match(/MicroMessenger/i) == 'micromessenger') {
-                return true;
-            } else {
-                return false;
-            }
-        }
-        document.onreadystatechange = function () {
-            if (document.readyState == "complete") {
-                if (isWeiXin()) {
-                } else {
-                    while (1) {
-                        var wechat_items = document.getElementsByClassName("wechat");
-                        if (wechat_items.length > 0) {
-                            wechat_items[0].remove();
-                        } else {
-                            break;
-                        }
-
-                    }
-                }
-            }
-        }
-
+        new WOW(
+        ).init();
     </script>
+
+
 </head>
 <body>
-<p align="right" class="wechat">↑</p>
-<p align="right" class="wechat">如果你用的是微信内置浏览器的话,麻烦请按菜单上的"在浏览器打开"</p>
-<input type="submit" name="Submit" value="下载"
-       onclick="window.location='https://gitee.com/daidaijie/Syllabus-2.0.0/raw/master/syllabus%202.0.2.apk'">
+
+
+<section id="banner" class="wow fadeInUp">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-sm-6">
+                <div class="block">
+                    <img class="app-img img-responsive" src="images/app.png" alt="">
+                </div>
+
+            </div>
+            <div class="col-md-6 col-md-offset-1 col-sm-6">
+                <div class="block">
+                    <h1>
+                        汕大课程表
+                    </h1>
+                    <p>
+                        同步课表信息、查看作业、自由吹水、查看考试安排、查询成绩、关注办公自动化，给你一个个性化的体验！
+                    </p>
+
+                    <ul class="download-btn">
+                        <li>
+                            <a href="#" class="btn btn-default btn-andriod">安卓下载</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="shade" style="display: none">
+            <p class="shade-text">无法在微信中下载app,<br>请打开右上角按钮选择浏览器进行下载</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="service">
+    <div class="container">
+        <div class="service-wrapper">
+            <div class="row">
+                <div class=" col-sm-6">
+                    <div class="block wow fadeInRight" data-wow-delay="1s">
+                        <!--<div class="icon">-->
+                        <!--<i class="fa fa-desktop"></i>-->
+                        <!--</div>-->
+
+                        <h3>更新日志</h3>
+                        <p>修复考试崩溃</p>
+                        <p>修复课程崩溃</p>
+                        <p>更改主色调</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="block wow fadeInRight" data-wow-delay="1.3s">
+                        <!--<div class="icon">-->
+                        <!--<i class="fa  fa-paper-plane"></i>-->
+                        <!--</div>-->
+                        <h3>特性</h3>
+                        <p>同步课表信息</p>
+                        <p>课表个性化</p>
+                        <p>查看作业</p>
+                        <p>自由吹水</p>
+                        <p>查看考试安排</p>
+                        <p>查询成绩</p>
+                        <p>关注办公自动化</p>
+                    </div>
+                </div>
+                <!--<div class="col-md-3 col-sm-6">-->
+                <!--<div class="block wow fadeInRight" data-wow-delay="1.6s">-->
+                <!--&lt;!&ndash;<div class="icon">&ndash;&gt;-->
+                <!--&lt;!&ndash;<i class="fa  fa-file-text"></i>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--<h3>官网</h3>-->
+                <!--<p><a href="https://www.stuapps.com/">https://www.stuapps.com/</a></p>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-md-3 col-sm-6">-->
+                <!--<div class="block wow fadeInRight" data-wow-delay="1.9s">-->
+                <!--&lt;!&ndash;<div class="icon">&ndash;&gt;-->
+                <!--&lt;!&ndash;<i class="fa  fa-laptop"></i>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--<h3>github</h3>-->
+                <!--<p><a href="https://github.com/daidaijie/SyllabusApplication">https://github.com/daidaijie/SyllabusApplication</a></p>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer style="rgba(92,173,255,0.1)" class="wow fadeInUp" data-wow-delay=".8s">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="footer-logo" href="#">
+                    <img class="img-responsive" src="images/footer-logo.jpg" style="width: 40px;height: 40px" alt="">
+                </a>
+                <p><span class="main-page">官网 </span> <a href="https://www.stuapps.com/">https://www.stuapps.com/</a>
+                </p>
+                <p><span class="github-page">github主页</span> <a href="https://github.com/daidaijie/SyllabusApplication">https://github.com/daidaijie/SyllabusApplication</a>
+                </p>
+                <!--<p>Copyright © 2014 Themefisher. All rights reserved. Designed & developed by themefisher. More-->
+                    <!--Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a-->
+                            <!--href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>-->
+
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
