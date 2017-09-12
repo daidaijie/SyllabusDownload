@@ -6,11 +6,39 @@
           id="viewport">
     <meta charset="UTF-8">
     <title>下载课程表</title>
+    <script>
+        function isWeiXin() {
+            var ua = window.navigator.userAgent.toLowerCase();
+            console.log(ua);//mozilla/5.0 (iphone; cpu iphone os 9_1 like mac os x) applewebkit/601.1.46 (khtml, like gecko)version/9.0 mobile/13b143 safari/601.1
+            if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        document.onreadystatechange = function () {
+            if (document.readyState == "complete") {
+                if (isWeiXin()) {
+                } else {
+                    while (1) {
+                        var wechat_items = document.getElementsByClassName("wechat");
+                        if (wechat_items.length > 0) {
+                            wechat_items[0].remove();
+                        } else {
+                            break;
+                        }
+
+                    }
+                }
+            }
+        }
+
+    </script>
 </head>
 <body>
-<p align="right">↑</p>
-<p align="right">如果你用的是微信内置浏览器的话,麻烦请按菜单上的"在浏览器打开"</p>
-<input  type="submit" name="Submit" value="下载"
+<p align="right" class="wechat">↑</p>
+<p align="right" class="wechat">如果你用的是微信内置浏览器的话,麻烦请按菜单上的"在浏览器打开"</p>
+<input type="submit" name="Submit" value="下载"
        onclick="window.location='https://gitee.com/daidaijie/Syllabus-2.0.0/raw/master/syllabus%202.0.2.apk'">
 </body>
 </html>
