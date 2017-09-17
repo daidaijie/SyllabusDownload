@@ -19,7 +19,7 @@ $(function() {
       }else {
          // location.href='https://gitee.com/daidaijie/Syllabus-2.0.0/raw/master/syllabus%202.0.2.apk'
          //  $(location).attr('href', 'http://www.jb51.net');
-          window.location='https://gitee.com/daidaijie/Syllabus-2.0.0/raw/master/syllabus%202.0.2.apk'
+          window.location='https://gitee.com/daidaijie/Syllabus-2.0.0/raw/master/Syllabus.apk'
       }
   })
 });
